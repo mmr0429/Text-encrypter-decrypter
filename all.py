@@ -3,14 +3,12 @@ import sys
 from fileio import *
 from ed import *
 
-#default
-mode='h'
-kp='key.bin'
-mp='message.bin'
-
-mode=sys.argv[1]
-kp=sys.argv[2]
-mp=sys.argv[3]
+try:
+    mode=sys.argv[1]
+    kp=sys.argv[2]
+    mp=sys.argv[3]
+except:
+    mode="error"
 
 if (mode == 'e')or(mode=='E'):
     msg=input("Message to encrypt: ")
